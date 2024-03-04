@@ -57,7 +57,7 @@ var __privateMethod = (obj, member, method2) => {
   return method2;
 };
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/buffer.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/buffer.js
 var buffer_exports = {};
 __export(buffer_exports, {
   Buffer: () => Buffer2,
@@ -2006,7 +2006,7 @@ function dew() {
 }
 var exports$3, _dewExec$2, exports$2, _dewExec$1, exports$1, _dewExec, exports, Buffer2, SlowBuffer, INSPECT_MAX_BYTES, kMaxLength, FastBuffer;
 var init_buffer = __esm({
-  "../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/buffer.js"() {
+  "../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/buffer.js"() {
     exports$3 = {};
     _dewExec$2 = false;
     exports$2 = {};
@@ -7090,6 +7090,44 @@ function Vec2(t2) {
   return new AzleVec(t2);
 }
 
+// node_modules/azle/src/lib/candid/types/primitive/nats/nat.ts
+var AzleNat = class {
+  constructor() {
+    __publicField(this, "_azleKind", "AzleNat");
+  }
+  static toBytes(data) {
+    return encode3(this, data);
+  }
+  static fromBytes(bytes3) {
+    return decode3(this, bytes3);
+  }
+  static getIdl() {
+    return idl_exports.Nat;
+  }
+};
+__publicField(AzleNat, "_azleKind", "AzleNat");
+__publicField(AzleNat, "tsType");
+var nat = AzleNat;
+
+// node_modules/azle/src/lib/candid/types/primitive/nats/nat8.ts
+var AzleNat8 = class {
+  constructor() {
+    __publicField(this, "_azleKind", "AzleNat8");
+  }
+  static toBytes(data) {
+    return encode3(this, data);
+  }
+  static fromBytes(bytes3) {
+    return decode3(this, bytes3);
+  }
+  static getIdl() {
+    return idl_exports.Nat8;
+  }
+};
+__publicField(AzleNat8, "_azleKind", "AzleNat8");
+__publicField(AzleNat8, "tsType");
+var nat8 = AzleNat8;
+
 // node_modules/azle/src/lib/candid/types/primitive/nats/nat16.ts
 var AzleNat16 = class {
   constructor() {
@@ -7108,6 +7146,25 @@ var AzleNat16 = class {
 __publicField(AzleNat16, "_azleKind", "AzleNat16");
 __publicField(AzleNat16, "tsType");
 var nat16 = AzleNat16;
+
+// node_modules/azle/src/lib/candid/types/primitive/nats/nat32.ts
+var AzleNat32 = class {
+  constructor() {
+    __publicField(this, "_azleKind", "AzleNat32");
+  }
+  static toBytes(data) {
+    return encode3(this, data);
+  }
+  static fromBytes(bytes3) {
+    return decode3(this, bytes3);
+  }
+  static getIdl() {
+    return idl_exports.Nat32;
+  }
+};
+__publicField(AzleNat32, "_azleKind", "AzleNat32");
+__publicField(AzleNat32, "tsType");
+var nat32 = AzleNat32;
 
 // node_modules/azle/src/lib/candid/types/primitive/nats/nat64.ts
 var AzleNat64 = class {
@@ -7165,6 +7222,50 @@ var AzleText = class {
 __publicField(AzleText, "_azleKind", "AzleText");
 __publicField(AzleText, "tsType");
 var text = AzleText;
+
+// node_modules/azle/src/lib/candid/types/primitive/void.ts
+var AzleVoid = class {
+  constructor() {
+    __publicField(this, "_azleKind", "AzleVoid");
+  }
+  static toBytes(data) {
+    return encode3(this, data);
+  }
+  static fromBytes(bytes3) {
+    return decode3(this, bytes3);
+  }
+  static getIdl() {
+    return [];
+  }
+};
+__publicField(AzleVoid, "_azleKind", "AzleVoid");
+__publicField(AzleVoid, "tsType");
+var Void = AzleVoid;
+
+// node_modules/azle/src/lib/candid/types/reference/func.ts
+var modeToCandid = {
+  query: ["query"],
+  oneway: ["oneway"],
+  update: []
+};
+function Func2(paramCandidTypes, returnCandidTypes, mode) {
+  return {
+    tsType: {},
+    toBytes(data) {
+      return encode3(this, data);
+    },
+    fromBytes(bytes3) {
+      return decode3(this, bytes3);
+    },
+    getIdl(parents) {
+      return idl_exports.Func(
+        toIdlArray(paramCandidTypes, parents),
+        toIdlArray(returnCandidTypes, parents),
+        modeToCandid[mode]
+      );
+    }
+  };
+}
 
 // node_modules/azle/src/lib/error.ts
 function handleUncaughtError(rawError) {
@@ -8202,7 +8303,7 @@ function jsonReviver(_key, value) {
   return value;
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/process.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/process.js
 var process_exports = {};
 __export(process_exports, {
   _debugEnd: () => _debugEnd,
@@ -8505,7 +8606,7 @@ var process2 = {
 };
 var nextTick2 = globalThis.nextTick;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/punycode.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/punycode.js
 var punycode_exports = {};
 __export(punycode_exports, {
   decode: () => decode4,
@@ -8746,7 +8847,7 @@ var punycode = {
 };
 var punycode_default = punycode;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/querystring.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/querystring.js
 var querystring_exports = {};
 __export(querystring_exports, {
   decode: () => decode5,
@@ -8811,7 +8912,7 @@ var encode5 = o.encode;
 var parse = o.parse;
 var stringify = o.stringify;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/errors.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/errors.js
 var errors_exports = {};
 __export(errors_exports, {
   AbortError: () => AbortError2,
@@ -8883,7 +8984,7 @@ __export(errors_exports, {
   uvException: () => uvException
 });
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/types.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/types.js
 var types_exports = {};
 __export(types_exports, {
   isAnyArrayBuffer: () => isAnyArrayBuffer,
@@ -9044,7 +9145,7 @@ function isUint32Array(value) {
   return _isObjectLike(value) && _toString.call(value) === "[object Uint32Array]";
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/validators.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/validators.js
 function validatePort(port, name = "Port", allowZero = true) {
   if (typeof port !== "number" && typeof port !== "string" || typeof port === "string" && port.trim().length === 0 || +port !== +port >>> 0 || port > 65535 || port === 0 && !allowZero) {
     throw new ERR_SOCKET_BAD_PORT(name, port, allowZero);
@@ -9190,7 +9291,7 @@ var validateOneOf = hideStackFrames((value, name, oneOf) => {
   }
 });
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/util.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/util.js
 var ALL_PROPERTIES = 0;
 var ONLY_WRITABLE = 1;
 var ONLY_ENUMERABLE = 2;
@@ -9262,7 +9363,7 @@ function getOwnNonIndexProperties(obj, filter) {
   return result2;
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/inspect.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/inspect.js
 var kObjectType = 0;
 var kArrayType = 1;
 var kArrayExtrasType = 2;
@@ -10829,7 +10930,7 @@ function stripVTControlCharacters(str) {
   return str.replace(ansi, "");
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/errors.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/errors.js
 function hideStackFrames(fn) {
   const hidden = "__node_internal_" + fn.name;
   Object.defineProperty(fn, "name", { value: hidden });
@@ -11592,10 +11693,10 @@ var ERR_CRYPTO_UNKNOWN_CIPHER = class extends Error {
   }
 };
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/utils.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/utils.js
 init_buffer();
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util.js
 var customInspectSymbol2 = Symbol.for("nodejs.util.inspect.custom");
 var kEnumerableProperty = /* @__PURE__ */ Object.create(null);
 kEnumerableProperty.enumerable = true;
@@ -11702,7 +11803,7 @@ function promisify(original) {
 promisify.custom = kCustomPromisifiedSymbol;
 var kEmptyObject2 = Object.freeze(/* @__PURE__ */ Object.create(null));
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/url.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/url.js
 init_buffer();
 var searchParams = Symbol("query");
 function toPathIfFileURL(fileURLOrPath) {
@@ -11712,17 +11813,17 @@ function toPathIfFileURL(fileURLOrPath) {
   return fileURLToPath(fileURLOrPath);
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/assert.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/assert.js
 function assert3(expr, msg = "") {
   if (!expr) {
     throw new Error(msg);
   }
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs.js
 import * as binding2 from "_node:fs";
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/constants.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/constants.js
 var os = {
   UV_UDP_IPV6ONLY: 1,
   UV_UDP_PARTIAL: 2,
@@ -11923,10 +12024,10 @@ var fs = {
   COPYFILE_FICLONE_FORCE: 4
 };
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs.js
 init_buffer();
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs/promises.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs/promises.js
 var access2 = promisify(access);
 var appendFile2 = (file, data, opts) => {
   if (file instanceof FileHandle) {
@@ -12019,7 +12120,7 @@ var promises = {
 };
 var promises_default = promises;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp.js
 var {
   ERR_FS_CP_DIR_TO_NON_DIR: ERR_FS_CP_DIR_TO_NON_DIR2,
   ERR_FS_CP_EEXIST: ERR_FS_CP_EEXIST2,
@@ -12322,10 +12423,10 @@ async function copyLink(resolvedSrc, dest) {
   return symlink2(resolvedSrc, dest);
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util/types.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util/types.js
 var types_default = { ...types_exports };
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp-sync.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp-sync.js
 var {
   errno: {
     EEXIST: EEXIST2,
@@ -12609,7 +12710,7 @@ function copyLink2(resolvedSrc, dest) {
 }
 var cp_sync_default = cpSyncFn;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/end-of-stream.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/end-of-stream.js
 function isRequest(stream) {
   return stream.setHeader && typeof stream.abort === "function";
 }
@@ -12764,7 +12865,7 @@ function eos(stream, options, callback) {
 }
 var end_of_stream_default = eos;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/add-abort-signal.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/add-abort-signal.js
 var validateAbortSignal3 = (signal, name) => {
   if (typeof signal !== "object" || !("aborted" in signal)) {
     throw new ERR_INVALID_ARG_TYPE(name, "AbortSignal", signal);
@@ -12796,7 +12897,7 @@ function addAbortSignalNoValidate(signal, stream) {
   return stream;
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/destroy.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/destroy.js
 var kDestroy = Symbol("kDestroy");
 var kConstruct = Symbol("kConstruct");
 function checkError(err2, w, r3) {
@@ -13052,7 +13153,7 @@ var destroy_default = {
   errorOrDestroy
 };
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/utils.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/utils.js
 var kIsDisturbed = Symbol("kIsDisturbed");
 function isReadableNodeStream(obj) {
   return !!(obj && typeof obj.pipe === "function" && typeof obj.on === "function" && (!obj._writableState || obj._readableState?.readable !== false) && // Duplex
@@ -13126,7 +13227,7 @@ function isWritable2(stream) {
   return r3 && stream.writable && !isWritableEnded(stream);
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/from.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/from.js
 init_buffer();
 function _from(Readable2, iterable, opts) {
   let iterator;
@@ -13212,10 +13313,10 @@ function _from(Readable2, iterable, opts) {
 }
 var from_default = _from;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/readable.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/readable.js
 init_buffer();
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fmt/printf.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fmt/printf.js
 var State = {
   PASSTHROUGH: 1,
   PERCENT: 2,
@@ -13855,7 +13956,7 @@ function sprintf(format3, ...args2) {
   return printf.doPrintf();
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/debuglog.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/debuglog.js
 var debugImpls;
 var testEnabled;
 function initializeDebugEnv(debugEnv2) {
@@ -13923,7 +14024,7 @@ function debuglog(set, cb) {
 var debugEnv = env["NODE_DEBUG"] ?? "";
 initializeDebugEnv(debugEnv);
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/state.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/state.js
 function highWaterMarkFrom(options, isDuplex, duplexKey) {
   return options.highWaterMark != null ? options.highWaterMark : isDuplex ? options[duplexKey] : null;
 }
@@ -13942,7 +14043,7 @@ function getHighWaterMark(state, options, duplexKey, isDuplex) {
   return getDefaultHighWaterMark(state.objectMode);
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/events.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/events.js
 var domain2;
 var kRejection = Symbol.for("nodejs.rejection");
 function EventHandlers() {
@@ -14320,7 +14421,7 @@ function unwrapListeners(arr) {
   return ret;
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/legacy.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/legacy.js
 function Stream(opts) {
   events_default.call(this, opts);
 }
@@ -14396,7 +14497,7 @@ function prependListener3(emitter, event, fn) {
   }
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/string_decoder.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/string_decoder.js
 init_buffer();
 var isBufferEncoding = Buffer2.isEncoding || function(encoding2) {
   switch (encoding2 && encoding2.toLowerCase()) {
@@ -14530,7 +14631,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/buffer_list.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/buffer_list.js
 init_buffer();
 var BufferList = class {
   constructor() {
@@ -14688,7 +14789,7 @@ var BufferList = class {
 };
 var buffer_list_default = BufferList;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/readable.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/readable.js
 var debug = debuglog("stream", (fn) => {
   debug = fn;
 });
@@ -15611,7 +15712,7 @@ Readable.from = readableFrom;
 Readable.wrap = wrap;
 var readable_default = Readable;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/writable.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/writable.js
 init_buffer();
 function _uint8ArrayToBuffer(chunk) {
   return Buffer2.from(
@@ -16198,7 +16299,7 @@ Writable.prototype[events_default.captureRejectionSymbol] = function(err2) {
 Writable.WritableState = WritableState;
 var writable_default = Writable;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/duplex.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/duplex.js
 function Duplex(options) {
   if (!(this instanceof Duplex)) {
     return new Duplex(options);
@@ -16561,7 +16662,7 @@ function duplexFrom(body2) {
 Duplex.from = duplexFrom;
 var duplex_default = Duplex;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/transform.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/transform.js
 var kCallback = Symbol("kCallback");
 function Transform(options) {
   if (!(this instanceof Transform)) {
@@ -16710,7 +16811,7 @@ Transform.prototype._read = function() {
 };
 var transform_default = Transform;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/passthrough.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/passthrough.js
 function PassThrough(options) {
   if (!(this instanceof PassThrough)) {
     return new PassThrough(options);
@@ -16724,7 +16825,7 @@ PassThrough.prototype._transform = function(chunk, encoding2, cb) {
 };
 var passthrough_default = PassThrough;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/pipeline.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/pipeline.js
 function destroyer2(stream, reading, writing, callback) {
   callback = once2(callback);
   let finished2 = false;
@@ -16936,7 +17037,7 @@ function pipelineImpl(streams, callback, opts) {
   return ret;
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/compose.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/compose.js
 var ComposeDuplex = class extends duplex_default {
   constructor(options) {
     super(options);
@@ -17083,7 +17184,7 @@ function compose(...streams) {
 }
 var compose_default = compose;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream/promises.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream/promises.js
 function pipeline2(...streams) {
   return new Promise((resolve3, reject2) => {
     let signal;
@@ -17119,7 +17220,7 @@ var promises_default2 = {
   pipeline: pipeline2
 };
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream.js
 init_buffer();
 var { custom: customPromisify } = promisify;
 function _uint8ArrayToBuffer2(chunk) {
@@ -17163,7 +17264,7 @@ Stream.Stream = Stream;
 Stream._isUint8Array = isUint8Array;
 Stream._uint8ArrayToBuffer = _uint8ArrayToBuffer2;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs.js
 var fs_default = {
   F_OK: fs.F_OK,
   R_OK: fs.R_OK,
@@ -17269,7 +17370,7 @@ var R_OK = fs.R_OK;
 var W_OK = fs.W_OK;
 var X_OK = fs.X_OK;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/stream.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/stream.js
 var kIsPerformingIO = Symbol("kIsPerformingIO");
 var kFs = Symbol("kFs");
 var _a, _b;
@@ -17478,7 +17579,7 @@ function createReadStream(path2, options) {
   return new ReadStream(path2, options);
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/uv.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/uv.js
 var UV_EOF = -4095;
 var UV_UNKNOWN = -4094;
 var UV_EAI_ADDRFAMILY = -3e3;
@@ -17646,7 +17747,7 @@ var uv_default = {
   UV_ESOCKTNOSUPPORT
 };
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs.js
 function makeCallback(cb) {
   validateFunction(cb, "cb");
   return (...args2) => Reflect.apply(cb, this, args2);
@@ -20055,7 +20156,7 @@ var FileHandle = class extends events_default {
 _fd2 = new WeakMap();
 _path = new WeakMap();
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/utils.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/utils.js
 var kType = Symbol("type");
 var kStats = Symbol("stats");
 var isWindows = false;
@@ -20593,7 +20694,7 @@ var validateEncoding = hideStackFrames((value, name) => {
   }
 });
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/path.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/path.js
 var exports$12 = {};
 var _dewExec2 = false;
 function dew2() {
@@ -21084,10 +21185,10 @@ var sep = exports2.sep;
 var win32 = exports2.win32;
 var toNamespacedPath = exports2.toNamespacedPath;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util.js
 init_buffer();
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/encoding.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/encoding.js
 import { text_encode, text_decode, text_encode_into } from "_encoding";
 function isError(e3) {
   return isObject(e3) && (objectToString(e3) === "[object Error]" || e3 instanceof Error);
@@ -21200,7 +21301,7 @@ _ignoreBOM = new WeakMap();
 globalThis.TextDecoder = TextDecoder2;
 globalThis.TextEncoder = TextEncoder2;
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util.js
 var debuglog2 = debuglog;
 var promisify2 = promisify;
 var deprecate2 = deprecate;
@@ -21385,7 +21486,7 @@ var util_default = {
   debuglog: debuglog2
 };
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/whatwg_url.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/whatwg_url.js
 var urlStateMachine = { exports: {} };
 function isASCIIDigit(c2) {
   return c2 >= 48 && c2 <= 57;
@@ -22911,7 +23012,7 @@ var URL = /* @__PURE__ */ function() {
   return URL3;
 }();
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/url.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/url.js
 var h = {};
 var e2 = punycode_exports;
 var a = {
@@ -24241,7 +24342,7 @@ function isSerializable(obj) {
   }
 }
 
-// ../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/http.js
+// ../../../../../../home/irvin/.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/http.js
 import * as net from "wasi_net";
 import * as httpx from "wasi_http";
 init_buffer();
@@ -25414,30 +25515,427 @@ var Principal4 = class _Principal {
   }
 };
 
-// src/index.ts
-var Strategy = Record2({
-  id: text,
-  gameName: text,
-  gameStrategy: text,
-  dateJoined: text
+// node_modules/azle/canisters/management/bitcoin.ts
+var BitcoinAddress = text;
+var BlockHash = blob;
+var Page = blob;
+var MillisatoshiPerByte = nat64;
+var Satoshi = nat64;
+var BitcoinNetwork = Variant2({
+  mainnet: Null2,
+  regtest: Null2,
+  testnet: Null2
 });
-var strategies = StableBTreeMap(0);
+var Outpoint = Record2({
+  txid: blob,
+  vout: nat32
+});
+var Utxo = Record2({
+  height: nat32,
+  outpoint: Outpoint,
+  value: Satoshi
+});
+var UtxosFilter = Variant2({
+  MinConfirmations: nat32,
+  Page
+});
+var GetBalanceArgs = Record2({
+  address: BitcoinAddress,
+  min_confirmations: Opt2(nat32),
+  network: BitcoinNetwork
+});
+var GetCurrentFeePercentilesArgs = Record2({
+  network: BitcoinNetwork
+});
+var GetUtxosArgs = Record2({
+  address: BitcoinAddress,
+  filter: Opt2(UtxosFilter),
+  network: BitcoinNetwork
+});
+var GetUtxosResult = Record2({
+  next_page: Opt2(Page),
+  tip_block_hash: BlockHash,
+  tip_height: nat32,
+  utxos: Vec2(Utxo)
+});
+var SendTransactionArgs = Record2({
+  transaction: blob,
+  network: BitcoinNetwork
+});
+var SendTransactionError = Variant2({
+  MalformedTransaction: Null2,
+  QueueFull: Null2
+});
+
+// node_modules/azle/canisters/management/canister_info.ts
+var CanisterInfoArgs = Record2({
+  /** Principle of the canister. */
+  canister_id: Principal3,
+  /**
+   * Number of most recent changes requested to be retrieved from canister
+   * history. No changes are retrieved if this field is `None`.
+   */
+  num_requested_changes: Opt2(nat64)
+});
+var CreationRecord = Record2({
+  /** Initial set of canister controllers. */
+  controllers: Vec2(Principal3)
+});
+var CanisterInstallMode = Variant2({
+  /** A fresh install of a new canister. */
+  install: Null2,
+  /** Reinstalling a canister that was already installed. */
+  reinstall: Null2,
+  /** Upgrade an existing canister. */
+  upgrade: Null2
+});
+var CodeDeploymentRecord = Record2({
+  /** See {@link CanisterInstallMode}. */
+  mode: CanisterInstallMode,
+  /** A SHA256 hash of the new module installed on the canister. */
+  module_hash: Vec2(nat8)
+});
+var ControllersChangeRecord = Record2({
+  /** The full new set of canister controllers. */
+  controllers: Vec2(Principal3)
+});
+var CanisterChangeDetails = Variant2({
+  /** See {@link CreationRecord}. */
+  creation: CreationRecord,
+  /** Uninstalling canister's module */
+  code_uninstall: Null2,
+  /** See {@link CodeDeploymentRecord}. */
+  code_deployment: CodeDeploymentRecord,
+  /** See {@link ControllersChangeRecord}. */
+  controllers_change: ControllersChangeRecord
+});
+var FromUserRecord = Record2({
+  /** Principle of the user. */
+  user_id: Principal3
+});
+var FromCanisterRecord = Record2({
+  /** Principle of the originator. */
+  canister_id: Principal3,
+  /**
+   * Canister version of the originator when the originator initiated the
+   * change. This is `None` if the original does not include its canister
+   * version in the field `sender_canister_version` of the management canister
+   * payload.
+   */
+  canister_version: Opt2(nat64)
+});
+var CanisterChangeOrigin = Variant2({
+  /** See {@link FromUserRecord}. */
+  from_user: FromUserRecord,
+  /** See {@link FromCanisterRecord}. */
+  from_canister: FromCanisterRecord
+});
+var CanisterChange = Record2({
+  /**
+   * The system timestamp (in nanoseconds since Unix Epoch) at which the
+   * change was performed
+   */
+  timestamp_nanos: nat64,
+  /** The canister version after performing the change. */
+  canister_version: nat64,
+  /** The change’s origin (a user or a canister). */
+  origin: CanisterChangeOrigin,
+  /** The change’s details. */
+  details: CanisterChangeDetails
+});
+var CanisterInfoResult = Record2({
+  /**
+   * Total number of changes ever recorded in canister history. This might be
+   * higher than the number of canister changes in recent_changes because the
+   * IC might drop old canister changes from its history (with 20 most recent
+   * canister changes to always remain in the list).
+   */
+  total_num_changes: nat64,
+  /**
+   * The canister changes stored in the order from the oldest to the most
+   * recent.
+   */
+  recent_changes: Vec2(CanisterChange),
+  /**
+   * A SHA256 hash of the module installed on the canister. This is null if
+   * the canister is empty.
+   */
+  module_hash: Opt2(Vec2(nat8)),
+  /** Controllers of the canister. */
+  controllers: Vec2(Principal3)
+});
+
+// node_modules/azle/canisters/management/canister_management.ts
+var CanisterId = Principal3;
+var WasmModule = blob;
+var CanisterSettings = Record2({
+  /**
+   * A list of principals. Must be between 0 and 10 in size. This
+   * value is assigned to the controllers attribute of the canister.
+   *
+   * Default value: A list containing only the caller of the
+   * {@link Management.create_canister} call
+   */
+  controllers: Opt2(Vec2(Principal3)),
+  compute_allocation: Opt2(nat),
+  memory_allocation: Opt2(nat),
+  freezing_threshold: Opt2(nat),
+  reserved_cycles_limit: Opt2(nat)
+});
+var CreateCanisterArgs = Record2({
+  settings: Opt2(CanisterSettings),
+  sender_canister_version: Opt2(nat64)
+});
+var CreateCanisterResult = Record2({
+  canister_id: Principal3
+});
+var CanisterStatus = Variant2({
+  running: Null2,
+  stopping: Null2,
+  stopped: Null2
+});
+var DefiniteCanisterSettings = Record2({
+  controllers: Vec2(Principal3),
+  compute_allocation: nat,
+  memory_allocation: nat,
+  freezing_threshold: nat,
+  reserved_cycles_limit: nat
+});
+var CanisterStatusResult = Record2({
+  status: CanisterStatus,
+  settings: DefiniteCanisterSettings,
+  module_hash: Opt2(blob),
+  memory_size: nat,
+  cycles: nat,
+  reserved_cycles: nat,
+  idle_cycles_burned_per_day: nat
+});
+var CanisterStatusArgs = Record2({
+  canister_id: Principal3
+});
+var UpdateSettingsArgs = Record2({
+  canister_id: CanisterId,
+  settings: CanisterSettings,
+  sender_canister_version: Opt2(nat64)
+});
+var InstallCodeMode = Variant2({
+  install: Null2,
+  reinstall: Null2,
+  upgrade: Null2
+});
+var InstallCodeArgs = Record2({
+  mode: InstallCodeMode,
+  canister_id: CanisterId,
+  wasm_module: WasmModule,
+  arg: blob,
+  sender_canister_version: Opt2(nat64)
+});
+var UninstallCodeArgs = Record2({
+  canister_id: CanisterId,
+  sender_canister_version: Opt2(nat64)
+});
+var StartCanisterArgs = Record2({
+  canister_id: CanisterId
+});
+var StopCanisterArgs = Record2({
+  canister_id: CanisterId
+});
+var DeleteCanisterArgs = Record2({
+  canister_id: CanisterId
+});
+var ProvisionalCreateCanisterWithCyclesArgs = Record2({
+  amount: Opt2(nat),
+  settings: Opt2(CanisterSettings),
+  specified_id: Opt2(CanisterId),
+  sender_canister_version: Opt2(nat64)
+});
+var ProvisionalCreateCanisterWithCyclesResult = Record2({
+  canister_id: CanisterId
+});
+var ProvisionalTopUpCanisterArgs = Record2({
+  canister_id: CanisterId,
+  amount: nat
+});
+var DepositCyclesArgs = Record2({
+  canister_id: CanisterId
+});
+
+// node_modules/azle/canisters/management/http_request.ts
+var HttpHeader = Record2({
+  name: text,
+  value: text
+});
+var HttpMethod = Variant2({
+  get: Null2,
+  head: Null2,
+  post: Null2
+});
+var HttpResponse = Record2({
+  /**
+   * The response status (e.g., 200, 404)
+   */
+  status: nat,
+  /**
+   * List of HTTP response headers and their corresponding values. The number
+   * of headers must not exceed 64. The total number of bytes representing the
+   * header names and values must not exceed 48KiB. The total number of bytes
+   * representing the header names and values must not exceed 48KiB.
+   */
+  headers: Vec2(HttpHeader),
+  /**
+   * The response's body encoded as bytes
+   */
+  body: blob
+});
+var HttpTransformArgs = Record2({
+  response: HttpResponse,
+  context: blob
+});
+var HttpTransformFunc = Func2(
+  [HttpTransformArgs],
+  HttpResponse,
+  "query"
+);
+var HttpTransform = Record2({
+  /**
+   * Transforms raw responses to sanitized responses. Must be an exported
+   * canister method.
+   */
+  function: HttpTransformFunc,
+  /**
+   * A byte-encoded value that is provided to the function upon
+   * invocation, along with the response to be sanitized.
+   */
+  context: blob
+});
+var HttpRequestArgs = Record2({
+  /**
+   * The requested URL. The URL must be valid according to
+   * https://www.ietf.org/rfc/rfc3986.txt[RFC-3986] and its length must not
+   * exceed 8192. The URL may specify a custom port number.
+   */
+  url: text,
+  /**
+   * Specifies the maximal size of the response in bytes. If provided, the
+   * value must not exceed 2MB (2,000,000B). The call will be charged based on
+   * this parameter. If not provided, the maximum of 2MB will be used.
+   */
+  max_response_bytes: Opt2(nat64),
+  /**
+   * Currently, only GET, HEAD, and POST are supported
+   */
+  method: HttpMethod,
+  /**
+   * List of HTTP request headers and their corresponding values. The number
+   * of headers must not exceed 64. The total number of bytes representing the
+   * header names and values must not exceed 48KiB. The total number of bytes
+   * representing the header names and values must not exceed 48KiB.
+   */
+  headers: Vec2(HttpHeader),
+  /**
+   * The content of the request's body
+   */
+  body: Opt2(blob),
+  /**
+   * An optional function that transforms raw responses to sanitized responses,
+   * and a byte-encoded context that is provided to the function upon
+   * invocation, along with the response to be sanitized.
+   * If provided, the calling canister itself must export this function.
+   */
+  transform: Opt2(HttpTransform)
+});
+
+// node_modules/azle/canisters/management/t_ecdsa.ts
+var EcdsaCurve = Variant2({
+  secp256k1: Null2
+});
+var KeyId = Record2({
+  curve: EcdsaCurve,
+  name: text
+});
+var EcdsaPublicKeyArgs = Record2({
+  canister_id: Opt2(Principal3),
+  derivation_path: Vec2(blob),
+  key_id: KeyId
+});
+var EcdsaPublicKeyResult = Record2({
+  public_key: blob,
+  chain_code: blob
+});
+var SignWithEcdsaArgs = Record2({
+  message_hash: blob,
+  derivation_path: Vec2(blob),
+  key_id: KeyId
+});
+var SignWithEcdsaResult = Record2({
+  signature: blob
+});
+
+// node_modules/azle/canisters/management/index.ts
+var managementCanister = Canister({
+  // bitcoin
+  bitcoin_get_balance: update([GetBalanceArgs], Satoshi),
+  bitcoin_get_current_fee_percentiles: update(
+    [GetCurrentFeePercentilesArgs],
+    Vec2(MillisatoshiPerByte)
+  ),
+  bitcoin_get_utxos: update([GetUtxosArgs], GetUtxosResult),
+  bitcoin_send_transaction: update([SendTransactionArgs], Void),
+  // canister management
+  create_canister: update([CreateCanisterArgs], CreateCanisterResult),
+  update_settings: update([UpdateSettingsArgs], Void),
+  install_code: update([InstallCodeArgs], Void),
+  uninstall_code: update([UninstallCodeArgs], Void),
+  start_canister: update([StartCanisterArgs], Void),
+  stop_canister: update([StopCanisterArgs], Void),
+  /** Get public information about the canister. */
+  canister_info: update([CanisterInfoArgs], CanisterInfoResult),
+  canister_status: update([CanisterStatusArgs], CanisterStatusResult),
+  delete_canister: update([DeleteCanisterArgs], Void),
+  deposit_cycles: update([DepositCyclesArgs], Void),
+  provisional_create_canister_with_cycles: update(
+    [ProvisionalCreateCanisterWithCyclesArgs],
+    ProvisionalCreateCanisterWithCyclesResult
+  ),
+  provisional_top_up_canister: update([ProvisionalTopUpCanisterArgs], Void),
+  // http
+  http_request: update([HttpRequestArgs], HttpResponse),
+  // randomness
+  raw_rand: update([], blob),
+  // tEcdsa
+  ecdsa_public_key: update([EcdsaPublicKeyArgs], EcdsaPublicKeyResult),
+  sign_with_ecdsa: update([SignWithEcdsaArgs], SignWithEcdsaResult)
+})(Principal3.fromText("aaaaa-aa"));
+
+// src/index.ts
+var Rascal = Record2({
+  id: text,
+  name: text,
+  health: nat,
+  attack: nat,
+  speed: nat
+});
+var rascals = StableBTreeMap(0);
 var src_default = Canister({
-  insertStrategy: update([text, text], Strategy, (gameName, gameStrategy) => {
+  makeRascal: update([text], Rascal, (rascalName) => {
     const newStrategy = {
       id: v4_default(),
-      gameName,
-      gameStrategy,
-      dateJoined: (/* @__PURE__ */ new Date()).toISOString()
+      name: rascalName,
+      health: BigInt(Math.floor(Math.random() * (151 - 100)) + 100),
+      attack: BigInt(Math.floor(Math.random() * (31 - 10)) + 10),
+      speed: BigInt(Math.floor(Math.random() * (11 - 5)) + 5)
     };
-    strategies.insert(newStrategy.id, newStrategy);
+    rascals.insert(newStrategy.id, newStrategy);
     return newStrategy;
   }),
-  getAllStrategies: query([], Vec2(Strategy), () => {
-    return strategies.values();
+  getAllRacals: query([], Vec2(Rascal), () => {
+    return rascals.values();
   }),
-  getStrategiesByGameName: query([text], Vec2(Strategy), (gameName) => {
-    return strategies.values().filter((strategy) => strategy.gameName.includes(gameName));
+  getRandomRascal: update([], Rascal, async () => {
+    const rascalArray = [...rascals.values()];
+    const rng2 = await ic.call(managementCanister.raw_rand);
+    const randomIndex = Math.floor(rng2[0] % rascalArray.length);
+    return rascalArray[randomIndex];
   })
 });
 

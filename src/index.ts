@@ -1,34 +1,43 @@
-import { Canister, Opt, Record, Result, StableBTreeMap, Vec, query, text, update } from 'azle';
+import { Canister, Opt, Record, Result, StableBTreeMap, Vec, nat, query, text, update } from 'azle';
 import { v4 as uuidv4 } from 'uuid';
+import { blob, ic } from 'azle';
+import { managementCanister } from 'azle/canisters/management';
 
-const Strategy = Record({
-    id: text,
-    gameName: text,
-    gameStrategy: text,
-    dateJoined: text
+const Rascal = Record({
+    id : text,
+    name: text,
+    health : nat,
+    attack : nat,
+    speed : nat
 });
 
-type Strategy = typeof Strategy.tsType;
+type Rascal = typeof Rascal.tsType;
 
-const strategies = StableBTreeMap<text, Strategy>(0);
+const rascals = StableBTreeMap<text, Rascal>(0);
 
 export default Canister({
-    insertStrategy: update([text, text], Strategy, (gameName, gameStrategy) => {
-        const newStrategy: Strategy = {
+    makeRascal: update([text], Rascal, (rascalName) => {
+        const newStrategy: Rascal = {
             id: uuidv4(),
-            gameName,
-            gameStrategy,
-            dateJoined: new Date().toISOString()
+            name: rascalName,
+            health: BigInt(Math.floor(Math.random() * (151 - 100)) + 100),
+            attack: BigInt(Math.floor(Math.random() * (31 - 10)) + 10),
+            speed: BigInt(Math.floor(Math.random() * (11 - 5)) + 5)
         }
 
-        strategies.insert(newStrategy.id, newStrategy);
+        rascals.insert(newStrategy.id, newStrategy);
 
         return newStrategy;
     }),
-    getAllStrategies: query([], Vec(Strategy), () => {
-        return strategies.values();
+
+    getAllRacals: query([], Vec(Rascal), () => {
+        return rascals.values();
     }),
-    getStrategiesByGameName: query([text], Vec(Strategy), (gameName) => {
-        return strategies.values().filter((strategy) => strategy.gameName.includes(gameName));
-    })
+
+    getRandomRascal: update([], Rascal, async  () => {
+        const rascalArray: Rascal[] = [...rascals.values()];
+        const rng = await ic.call(managementCanister.raw_rand);
+        const randomIndex = Math.floor(rng[0] % rascalArray.length);
+        return rascalArray[randomIndex];
+    }),
 })

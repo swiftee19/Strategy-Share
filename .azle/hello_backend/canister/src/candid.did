@@ -1,12 +1,13 @@
-type Strategy = record {
+type Rascal = record {
     id : text;
-    gameName : text;
-    gameStrategy : text;
-    dateJoined : text;
+    name : text;
+    health : nat;
+    attack : nat;
+    speed : nat;
 };
 
 service : () -> {
-    insertStrategy : (gameName : text, gameStrategy : text) -> (Strategy);
-    getAllStrategies: () -> (vec Strategy) query;
-    getStrategiesByGameName : (gameName : text) -> (vec Strategy) query;
+    makeRascal : (rascalName : text) -> (Rascal);
+    getAllRacals: () -> (vec Rascal) query;
+    getRandomRascal : () -> (Rascal)
 };

@@ -1,1 +1,1 @@
-{"canister_methods":{"queries":[{"name":"getAllStrategies","composite":false},{"name":"getStrategiesByGameName","composite":false}],"updates":[{"name":"insertStrategy"}],"callbacks":{}},"env_vars":[]}
+{"canister_methods":{"queries":[{"name":"getAllRacals","composite":false}],"updates":[{"name":"makeRascal"},{"name":"getRandomRascal"}],"callbacks":{}},"env_vars":[]}
