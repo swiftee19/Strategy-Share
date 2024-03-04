@@ -1,0 +1,1 @@
+{"canister_methods":{"queries":[{"name":"getAllStrategies","composite":false},{"name":"getStrategiesByGameName","composite":false}],"updates":[{"name":"insertStrategy"}],"callbacks":{}},"env_vars":[]}

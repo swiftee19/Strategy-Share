@@ -1,0 +1,12 @@
+type Strategy = record {
+    id : text;
+    gameName : text;
+    gameStrategy : text;
+    dateJoined : text;
+};
+
+service : () -> {
+    insertStrategy : (gameName : text, gameStrategy : text) -> (Strategy);
+    getAllStrategies: () -> (vec Strategy) query;
+    getStrategiesByGameName : (gameName : text) -> (vec Strategy) query;
+};
